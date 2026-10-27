@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffb6c8">
+  <meta name="description" content="Một lời mời đi chơi cuối tuần dễ thương và có thể tùy chỉnh.">
+  <title>Cuối tuần này nếu chị rảnh thì cho em chút thời gian nha 🌸</title>
+  <style>
+    :root {
+      --pink: #ff4b6e;
+      --pink-dark: #d90429;
+      --pink-soft: #ffe5ec;
+      --ink: #40343a;
+      --muted: #78666e;
+      --paper: rgba(255,255,255,.94);
+      --line: #f6d5df;
+      --shadow: 0 16px 42px rgba(180,45,80,.14);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 22px 14px 36px;
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 8% 5%, rgba(255,255,255,.8), transparent 24rem),
+        linear-gradient(135deg, #fff0f4, #ffc2d1 55%, #ffb3c6);
+    }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; border: none; }
+    button:focus-visible, input:focus-visible, select:focus-visible {
+      outline: 3px solid #8b3d62; outline-offset: 3px;
+    }
+    .hearts {
+      position: fixed; inset: 0; overflow: hidden;
+      pointer-events: none; z-index: 0;
+    }
+    .heart {
+      position: absolute; bottom: -30px;
+      color: rgba(255, 55, 100, .36);
+      animation: rise 4s linear infinite; /* Đã thêm thời gian và chạy vô hạn để test */
+    }
+    @keyframes rise {
+      from { transform: translateY(0) rotate(0); opacity: 0; }
+      10% { opacity: 1; }
+      to { transform: translateY(-110vh) rotate(300deg); opacity: 0; }
+    }
+    .app { position: relative; z-index: 1; width: min(850px, 100%); margin: auto; }
+    
+    /* Sửa lại đoạn bị cắt và thêm giao diện mẫu */
+    .brand { 
+      text-align: center; 
+      color: var(--pink); 
+      margin-top: 40px;
+    }
+    .card {
+      background: var(--paper);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      margin-top: 20px;
+    }
+    .btn-yes {
+      background: var(--pink);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn-yes:hover { background: var(--pink-dark); }
+  </style>
+</head>
+<body>
+
+  <!-- Hiệu ứng trái tim bay (Cần JavaScript để tạo ra nhiều tim ngẫu nhiên) -->
+  <div class="hearts">
+    <div class="heart" style="left: 20%; font-size: 20px;">❤️</div>
+    <div class="heart" style="left: 50%; font-size: 30px; animation-delay: 1s;">🌸</div>
+    <div class="heart" style="left: 80%; font-size: 25px; animation-delay: 2s;">❤️</div>
+  </div>
+
+  <div class="app">
+    <div class="brand">
+      <h1>Hello chị! ✨</h1>
+    </div>
+    
+    <div class="card">
+      <p style="font-size: 1.2rem;">Cuối tuần này nếu chị rảnh thì cho em chút thời gian nha? ☕</p>
+      <button class="btn-yes">Dạ rảnh liền! 🥰</button>
+    </div>
+  </div>
+
+</body>
+</html>
+Hãy thận trọng khi sử dụng mã.
+Bạn có muốn mình bổ sung thêm hiệu ứng JavaScript để trái tim tự động tạo ra ngẫu nhiên liên tục, hoặc thêm nút bấm "Từ chối" tự động né con trỏ chuột không?
+
+chỉnh lại code trên sao cho đúng với github giúp mình
+
+Để đưa mã nguồn này lên GitHub (ví dụ làm trang thiệp mời chạy trực tiếp qua GitHub Pages), cấu trúc mã cần đảm bảo tính hoàn chỉnh của một file index.html. Ngoài ra, để trang web hoạt động lung linh hơn, mình đã bổ sung đoạn mã JavaScript tự động tạo hiệu ứng trái tim bay ngẫu nhiên (thay vì cố định vài trái tim như bản nháp).
+Dưới đây là toàn bộ đoạn code đã được sửa lại chuẩn chỉnh, bạn chỉ cần copy toàn bộ, lưu thành file đặt tên là index.html và tải lên kho lưu trữ (Repository) trên GitHub:
+html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffb6c8">
+  <meta name="description" content="Một lời mời đi chơi cuối tuần dễ thương và có thể tùy chỉnh.">
+  <title>Cuối tuần này nếu chị rảnh thì cho em chút thời gian nha 🌸</title>
+  <style>
+    /* =========================================================
+       TÙY CHỈNH GIAO DIỆN: đổi mã màu ở đây nếu muốn.
+       ========================================================= */
+    :root {
+      --pink: #ff4b6e;
+      --pink-dark: #d90429;
+      --pink-soft: #ffe5ec;
+      --ink: #40343a;
+      --muted: #78666e;
+      --paper: rgba(255,255,255,.94);
+      --line: #f6d5df;
+      --shadow: 0 16px 42px rgba(180,45,80,.14);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 22px 14px 36px;
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 8% 5%, rgba(255,255,255,.8), transparent 24rem),
+        linear-gradient(135deg, #fff0f4, #ffc2d1 55%, #ffb3c6);
+      overflow-x: hidden;
+    }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; border: none; }
+    button:focus-visible, input:focus-visible, select:focus-visible {
+      outline: 3px solid #8b3d62; outline-offset: 3px;
+    }
+    .hearts {
+      position: fixed; inset: 0; overflow: hidden;
+      pointer-events: none; z-index: 0;
+    }
+    .heart {
+      position: absolute; bottom: -30px;
+      color: rgba(255, 55, 100, .36);
+      animation: rise linear forwards;
+    }
+    @keyframes rise {
+      from { transform: translateY(0) rotate(0); opacity: 0; }
+      10% { opacity: 1; }
+      to { transform: translateY(-110vh) rotate(300deg); opacity: 0; }
+    }
+    .app { position: relative; z-index: 1; width: min(850px, 100%); margin: auto; }
+    
+    /* Đã sửa phần bị cắt ngang và hoàn thiện style */
+    .brand { 
+      text-align: center; 
+      color: var(--pink); 
+      margin-top: 10vh;
+    }
+    .brand h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    }
+    .card {
+      background: var(--paper);
+      padding: 40px 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      margin-top: 30px;
+      border: 1px solid var(--line);
+    }
+    .card p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      color: var(--ink);
+    }
+    .btn-yes {
+      background: var(--pink);
+      color: white;
+      padding: 14px 36px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 75, 110, 0.3);
+    }
+    .btn-yes:hover { 
+      background: var(--pink-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(217, 4, 41, 0.4);
+    }
+    .btn-yes:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Khu vực chứa hiệu ứng trái tim bay ngẫu nhiên từ JS -->
+  <div class="hearts" id="hearts-container"></div>
+
+  <div class="app">
+    <div class="brand">
+      <h1>Hello chị iu! ✨</h1>
+    </div>
+    
+    <div class="card">
+      <p>Cuối tuần này nếu chị rảnh thì cho em chút thời gian nha? ☕🌸</p>
+      <button class="btn-yes" onclick="celebrate()">Dạ rảnh liền! 🥰</button>
+    </div>
+  </div>
+
+  <script>
+    // Tự động tạo hiệu ứng trái tim và hoa bay ngẫu nhiên
+    const container = document.getElementById('hearts-container');
+    const icons = ['❤️', '🌸', '💖', '✨', '💕'];
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      
+      // Ngẫu nhiên biểu tượng, vị trí, kích thước và tốc độ bay
+      heart.innerText = icons[Math.floor(Math.random() * icons.length)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = Math.random() * 15 + 15 + 'px';
+      
+      const duration = Math.random() * 3 + 3; // Từ 3s đến 6s
+      heart.style.animationDuration = duration + 's';
+      
+      container.appendChild(heart);
+      
+      // Xóa phần tử sau khi bay xong để tránh nặng máy
+      setTimeout(() => {
+        heart.remove();
+      }, duration * 1000);
+    }
+
+    // Cứ mỗi 400ms tạo 1 bông/tim mới
+    setInterval(createHeart, 400);
+
+    // Hiệu ứng khi bấm nút đồng ý
+    function celebrate() {
+      alert("Hẹn gặp chị cuối tuần này nha! Hí hí 🥰🎉");
+      // Bạn có thể đổi dòng alert trên thành chuyển hướng link nếu muốn, ví dụ nhắn tin qua Facebook:
+      // window.location.href = "https://m.me";
+    }
+  </script>
+</body>
+</html>
